@@ -31,8 +31,9 @@ class QuickUsbMacos extends _QuickUsbDesktop {
 class QuickUsbLinux extends _QuickUsbDesktop {
   // For example/.dart_tool/flutter_build/generated_main.dart
   static registerWith() {
-    QuickUsbPlatform.instance = QuickUsbLinux();
-    _libusb = Libusb(DynamicLibrary.open('${File(Platform.resolvedExecutable).parent.path}/lib/libusb-1.0.23.so'));
+    QuickUsbPlatform.instance = QuickUsbLinux(); 
+    //_libusb = Libusb(DynamicLibrary.open('${File(Platform.resolvedExecutable).parent.path}/lib/libusb-1.0.23.so'));
+    _libusb = Libusb(DynamicLibrary.open('libusb-1.0.so'));
   }
 }
 
